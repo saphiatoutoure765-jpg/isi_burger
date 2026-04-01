@@ -1,0 +1,597 @@
+[2026-03-24 11:53:04] local.ERROR: SQLSTATE[08006] [7] fe_sendauth: no password supplied (Connection: pgsql, SQL: select * from information_schema.tables where table_catalog = isi_burger and table_schema = public and table_name = migrations and table_type = 'BASE TABLE') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 7): SQLSTATE[08006] [7] fe_sendauth: no password supplied (Connection: pgsql, SQL: select * from information_schema.tables where table_catalog = isi_burger and table_schema = public and table_name = migrations and table_type = 'BASE TABLE') at C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connection.php:829)
+[stacktrace]
+#0 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connection.php(783): Illuminate/Database/Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connection.php(431): Illuminate/Database/Connection->run('select * from i...', Array, Object(Closure))
+#2 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connection.php(401): Illuminate/Database/Connection->select('select * from i...', Array, false)
+#3 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Schema/PostgresBuilder.php(52): Illuminate/Database/Connection->selectFromWriteConnection('select * from i...', Array)
+#4 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(184): Illuminate/Database/Schema/PostgresBuilder->hasTable('migrations')
+#5 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(727): Illuminate/Database/Migrations/DatabaseMigrationRepository->repositoryExists()
+#6 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(140): Illuminate/Database/Migrations/Migrator->repositoryExists()
+#7 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Support/helpers.php(261): Illuminate/Database/Console/Migrations/MigrateCommand->Illuminate/Database/Console/Migrations/{closure}(1)
+#8 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(159): retry(1, Object(Closure), 0, Object(Closure))
+#9 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(116): Illuminate/Database/Console/Migrations/MigrateCommand->repositoryExists()
+#10 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(84): Illuminate/Database/Console/Migrations/MigrateCommand->prepareDatabase()
+#11 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(641): Illuminate/Database/Console/Migrations/MigrateCommand->Illuminate/Database/Console/Migrations/{closure}()
+#12 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(104): Illuminate/Database/Migrations/Migrator->usingConnection(NULL, Object(Closure))
+#13 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/MigrateCommand->handle()
+#14 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::Illuminate/Container/{closure}()
+#15 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#16 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#17 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#18 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#19 C:/laragon/www/isi_burger/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#20 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#21 C:/laragon/www/isi_burger/vendor/symfony/console/Application.php(1106): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#22 C:/laragon/www/isi_burger/vendor/symfony/console/Application.php(324): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Database/Console/Migrations/MigrateCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#23 C:/laragon/www/isi_burger/vendor/symfony/console/Application.php(175): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#24 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#25 C:/laragon/www/isi_burger/artisan(37): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 {main}
+
+[previous exception] [object] (PDOException(code: 7): SQLSTATE[08006] [7] fe_sendauth: no password supplied at C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:65)
+[stacktrace]
+#0 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(65): PDO->__construct('pgsql:host=127....', 'postgres', '', Array)
+#1 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(45): Illuminate/Database/Connectors/Connector->createPdoConnection('pgsql:host=127....', 'postgres', '', Array)
+#2 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connectors/PostgresConnector.php(36): Illuminate/Database/Connectors/Connector->createConnection('pgsql:host=127....', Array, Array)
+#3 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(184): Illuminate/Database/Connectors/PostgresConnector->connect(Array)
+#4 [internal function]: Illuminate/Database/Connectors/ConnectionFactory->Illuminate/Database/Connectors/{closure}()
+#5 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1339): call_user_func(Object(Closure))
+#6 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connection.php(528): Illuminate/Database/Connection->getPdo()
+#7 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connection.php(423): Illuminate/Database/Connection->getPdoForSelect(false)
+#8 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connection.php(816): Illuminate/Database/Connection->Illuminate/Database/{closure}('select * from i...', Array)
+#9 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connection.php(783): Illuminate/Database/Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#10 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connection.php(431): Illuminate/Database/Connection->run('select * from i...', Array, Object(Closure))
+#11 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Connection.php(401): Illuminate/Database/Connection->select('select * from i...', Array, false)
+#12 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Schema/PostgresBuilder.php(52): Illuminate/Database/Connection->selectFromWriteConnection('select * from i...', Array)
+#13 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(184): Illuminate/Database/Schema/PostgresBuilder->hasTable('migrations')
+#14 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(727): Illuminate/Database/Migrations/DatabaseMigrationRepository->repositoryExists()
+#15 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(140): Illuminate/Database/Migrations/Migrator->repositoryExists()
+#16 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Support/helpers.php(261): Illuminate/Database/Console/Migrations/MigrateCommand->Illuminate/Database/Console/Migrations/{closure}(1)
+#17 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(159): retry(1, Object(Closure), 0, Object(Closure))
+#18 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(116): Illuminate/Database/Console/Migrations/MigrateCommand->repositoryExists()
+#19 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(84): Illuminate/Database/Console/Migrations/MigrateCommand->prepareDatabase()
+#20 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(641): Illuminate/Database/Console/Migrations/MigrateCommand->Illuminate/Database/Console/Migrations/{closure}()
+#21 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(104): Illuminate/Database/Migrations/Migrator->usingConnection(NULL, Object(Closure))
+#22 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/MigrateCommand->handle()
+#23 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::Illuminate/Container/{closure}()
+#24 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#25 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#26 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#27 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#28 C:/laragon/www/isi_burger/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#29 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Console/Command.php(181): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#30 C:/laragon/www/isi_burger/vendor/symfony/console/Application.php(1106): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#31 C:/laragon/www/isi_burger/vendor/symfony/console/Application.php(324): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Database/Console/Migrations/MigrateCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#32 C:/laragon/www/isi_burger/vendor/symfony/console/Application.php(175): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#33 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#34 C:/laragon/www/isi_burger/artisan(37): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#35 {main}
+"} 
+[2026-03-24 12:31:57] local.ERROR: Expected response code "250" but got code "530", with message "530 5.7.1 Authentication required". {"userId":2,"exception":"[object] (Symfony\\Component\\Mailer\\Exception\\UnexpectedResponseException(code: 530): Expected response code \"250\" but got code \"530\", with message \"530 5.7.1 Authentication required\". at C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php:327)
+[stacktrace]
+#0 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(186): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
+#1 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/EsmtpTransport.php(118): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->executeCommand('MAIL FROM:<nore...', Array)
+#2 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(248): Symfony/Component/Mailer/Transport/Smtp/EsmtpTransport->executeCommand('MAIL FROM:<nore...', Array)
+#3 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(203): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->doMailFromCommand('noreply@isiburg...')
+#4 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/AbstractTransport.php(69): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->doSend(Object(Symfony/Component/Mailer/SentMessage))
+#5 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(137): Symfony/Component/Mailer/Transport/AbstractTransport->send(Object(Symfony/Component/Mime/Email), Object(Symfony/Component/Mailer/DelayedEnvelope))
+#6 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(573): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->send(Object(Symfony/Component/Mime/Email), Object(Symfony/Component/Mailer/DelayedEnvelope))
+#7 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(335): Illuminate/Mail/Mailer->sendSymfonyMessage(Object(Symfony/Component/Mime/Email))
+#8 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php(213): Illuminate/Mail/Mailer->send('emails.commande...', Array, Object(Closure))
+#9 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Support/Traits/Localizable.php(19): Illuminate/Mail/Mailable->Illuminate/Mail/{closure}()
+#10 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php(214): Illuminate/Mail/Mailable->withLocale(NULL, Object(Closure))
+#11 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(357): Illuminate/Mail/Mailable->send(Object(Illuminate/Mail/Mailer))
+#12 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(301): Illuminate/Mail/Mailer->sendMailable(Object(App/Mail/CommandeConfirmation))
+#13 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/PendingMail.php(124): Illuminate/Mail/Mailer->send(Object(App/Mail/CommandeConfirmation))
+#14 C:/laragon/www/isi_burger/app/Http/Controllers/CommandeController.php(73): Illuminate/Mail/PendingMail->send(Object(App/Mail/CommandeConfirmation))
+#15 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App/Http/Controllers/CommandeController->store(Object(Illuminate/Http/Request))
+#16 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(43): Illuminate/Routing/Controller->callAction('store', Array)
+#17 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Route.php(260): Illuminate/Routing/ControllerDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(App/Http/Controllers/CommandeController), 'store')
+#18 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#19 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#20 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->Illuminate/Routing/{closure}(Object(Illuminate/Http/Request))
+#21 C:/laragon/www/isi_burger/app/Http/Middleware/ClientMiddleware.php(18): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#22 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): App/Http/Middleware/ClientMiddleware->handle(Object(Illuminate/Http/Request), Object(Closure))
+#23 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#24 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#25 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#26 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#27 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#28 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#29 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#30 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#31 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#32 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#33 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#34 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#35 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#36 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#37 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#38 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#39 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#40 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#41 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#42 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->Illuminate/Foundation/Http/{closure}(Object(Illuminate/Http/Request))
+#43 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#44 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#45 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#46 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#47 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#48 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#49 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#50 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#51 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#52 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#53 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#54 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#55 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#56 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#57 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#58 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#59 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#60 C:/laragon/www/isi_burger/public/index.php(52): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#61 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('C://laragon//www//...')
+#62 {main}
+"} 
+[2026-03-24 12:32:00] local.ERROR: Expected response code "250" but got code "530", with message "530 5.7.1 Authentication required". {"userId":2,"exception":"[object] (Symfony\\Component\\Mailer\\Exception\\UnexpectedResponseException(code: 530): Expected response code \"250\" but got code \"530\", with message \"530 5.7.1 Authentication required\". at C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php:327)
+[stacktrace]
+#0 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(186): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
+#1 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/EsmtpTransport.php(118): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->executeCommand('MAIL FROM:<nore...', Array)
+#2 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(248): Symfony/Component/Mailer/Transport/Smtp/EsmtpTransport->executeCommand('MAIL FROM:<nore...', Array)
+#3 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(203): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->doMailFromCommand('noreply@isiburg...')
+#4 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/AbstractTransport.php(69): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->doSend(Object(Symfony/Component/Mailer/SentMessage))
+#5 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(137): Symfony/Component/Mailer/Transport/AbstractTransport->send(Object(Symfony/Component/Mime/Email), Object(Symfony/Component/Mailer/DelayedEnvelope))
+#6 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(573): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->send(Object(Symfony/Component/Mime/Email), Object(Symfony/Component/Mailer/DelayedEnvelope))
+#7 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(335): Illuminate/Mail/Mailer->sendSymfonyMessage(Object(Symfony/Component/Mime/Email))
+#8 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php(213): Illuminate/Mail/Mailer->send('emails.commande...', Array, Object(Closure))
+#9 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Support/Traits/Localizable.php(19): Illuminate/Mail/Mailable->Illuminate/Mail/{closure}()
+#10 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php(214): Illuminate/Mail/Mailable->withLocale(NULL, Object(Closure))
+#11 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(357): Illuminate/Mail/Mailable->send(Object(Illuminate/Mail/Mailer))
+#12 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(301): Illuminate/Mail/Mailer->sendMailable(Object(App/Mail/CommandeConfirmation))
+#13 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/PendingMail.php(124): Illuminate/Mail/Mailer->send(Object(App/Mail/CommandeConfirmation))
+#14 C:/laragon/www/isi_burger/app/Http/Controllers/CommandeController.php(73): Illuminate/Mail/PendingMail->send(Object(App/Mail/CommandeConfirmation))
+#15 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App/Http/Controllers/CommandeController->store(Object(Illuminate/Http/Request))
+#16 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(43): Illuminate/Routing/Controller->callAction('store', Array)
+#17 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Route.php(260): Illuminate/Routing/ControllerDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(App/Http/Controllers/CommandeController), 'store')
+#18 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#19 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#20 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->Illuminate/Routing/{closure}(Object(Illuminate/Http/Request))
+#21 C:/laragon/www/isi_burger/app/Http/Middleware/ClientMiddleware.php(18): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#22 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): App/Http/Middleware/ClientMiddleware->handle(Object(Illuminate/Http/Request), Object(Closure))
+#23 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#24 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#25 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#26 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#27 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#28 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#29 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#30 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#31 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#32 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#33 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#34 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#35 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#36 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#37 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#38 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#39 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#40 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#41 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#42 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->Illuminate/Foundation/Http/{closure}(Object(Illuminate/Http/Request))
+#43 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#44 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#45 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#46 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#47 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#48 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#49 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#50 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#51 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#52 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#53 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#54 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#55 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#56 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#57 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#58 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#59 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#60 C:/laragon/www/isi_burger/public/index.php(52): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#61 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('C://laragon//www//...')
+#62 {main}
+"} 
+[2026-03-24 12:32:04] local.ERROR: Expected response code "250" but got code "530", with message "530 5.7.1 Authentication required". {"userId":2,"exception":"[object] (Symfony\\Component\\Mailer\\Exception\\UnexpectedResponseException(code: 530): Expected response code \"250\" but got code \"530\", with message \"530 5.7.1 Authentication required\". at C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php:327)
+[stacktrace]
+#0 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(186): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
+#1 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/EsmtpTransport.php(118): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->executeCommand('MAIL FROM:<nore...', Array)
+#2 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(248): Symfony/Component/Mailer/Transport/Smtp/EsmtpTransport->executeCommand('MAIL FROM:<nore...', Array)
+#3 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(203): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->doMailFromCommand('noreply@isiburg...')
+#4 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/AbstractTransport.php(69): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->doSend(Object(Symfony/Component/Mailer/SentMessage))
+#5 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(137): Symfony/Component/Mailer/Transport/AbstractTransport->send(Object(Symfony/Component/Mime/Email), Object(Symfony/Component/Mailer/DelayedEnvelope))
+#6 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(573): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->send(Object(Symfony/Component/Mime/Email), Object(Symfony/Component/Mailer/DelayedEnvelope))
+#7 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(335): Illuminate/Mail/Mailer->sendSymfonyMessage(Object(Symfony/Component/Mime/Email))
+#8 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php(213): Illuminate/Mail/Mailer->send('emails.commande...', Array, Object(Closure))
+#9 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Support/Traits/Localizable.php(19): Illuminate/Mail/Mailable->Illuminate/Mail/{closure}()
+#10 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php(214): Illuminate/Mail/Mailable->withLocale(NULL, Object(Closure))
+#11 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(357): Illuminate/Mail/Mailable->send(Object(Illuminate/Mail/Mailer))
+#12 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(301): Illuminate/Mail/Mailer->sendMailable(Object(App/Mail/CommandeConfirmation))
+#13 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/PendingMail.php(124): Illuminate/Mail/Mailer->send(Object(App/Mail/CommandeConfirmation))
+#14 C:/laragon/www/isi_burger/app/Http/Controllers/CommandeController.php(73): Illuminate/Mail/PendingMail->send(Object(App/Mail/CommandeConfirmation))
+#15 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App/Http/Controllers/CommandeController->store(Object(Illuminate/Http/Request))
+#16 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(43): Illuminate/Routing/Controller->callAction('store', Array)
+#17 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Route.php(260): Illuminate/Routing/ControllerDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(App/Http/Controllers/CommandeController), 'store')
+#18 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#19 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#20 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->Illuminate/Routing/{closure}(Object(Illuminate/Http/Request))
+#21 C:/laragon/www/isi_burger/app/Http/Middleware/ClientMiddleware.php(18): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#22 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): App/Http/Middleware/ClientMiddleware->handle(Object(Illuminate/Http/Request), Object(Closure))
+#23 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#24 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#25 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#26 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#27 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#28 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#29 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#30 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#31 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#32 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#33 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#34 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#35 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#36 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#37 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#38 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#39 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#40 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#41 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#42 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->Illuminate/Foundation/Http/{closure}(Object(Illuminate/Http/Request))
+#43 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#44 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#45 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#46 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#47 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#48 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#49 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#50 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#51 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#52 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#53 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#54 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#55 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#56 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#57 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#58 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#59 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#60 C:/laragon/www/isi_burger/public/index.php(52): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#61 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('C://laragon//www//...')
+#62 {main}
+"} 
+[2026-03-24 12:32:07] local.ERROR: Expected response code "250" but got code "530", with message "530 5.7.1 Authentication required". {"userId":2,"exception":"[object] (Symfony\\Component\\Mailer\\Exception\\UnexpectedResponseException(code: 530): Expected response code \"250\" but got code \"530\", with message \"530 5.7.1 Authentication required\". at C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php:327)
+[stacktrace]
+#0 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(186): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
+#1 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/EsmtpTransport.php(118): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->executeCommand('MAIL FROM:<nore...', Array)
+#2 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(248): Symfony/Component/Mailer/Transport/Smtp/EsmtpTransport->executeCommand('MAIL FROM:<nore...', Array)
+#3 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(203): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->doMailFromCommand('noreply@isiburg...')
+#4 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/AbstractTransport.php(69): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->doSend(Object(Symfony/Component/Mailer/SentMessage))
+#5 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(137): Symfony/Component/Mailer/Transport/AbstractTransport->send(Object(Symfony/Component/Mime/Email), Object(Symfony/Component/Mailer/DelayedEnvelope))
+#6 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(573): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->send(Object(Symfony/Component/Mime/Email), Object(Symfony/Component/Mailer/DelayedEnvelope))
+#7 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(335): Illuminate/Mail/Mailer->sendSymfonyMessage(Object(Symfony/Component/Mime/Email))
+#8 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php(213): Illuminate/Mail/Mailer->send('emails.commande...', Array, Object(Closure))
+#9 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Support/Traits/Localizable.php(19): Illuminate/Mail/Mailable->Illuminate/Mail/{closure}()
+#10 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php(214): Illuminate/Mail/Mailable->withLocale(NULL, Object(Closure))
+#11 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(357): Illuminate/Mail/Mailable->send(Object(Illuminate/Mail/Mailer))
+#12 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(301): Illuminate/Mail/Mailer->sendMailable(Object(App/Mail/CommandeConfirmation))
+#13 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/PendingMail.php(124): Illuminate/Mail/Mailer->send(Object(App/Mail/CommandeConfirmation))
+#14 C:/laragon/www/isi_burger/app/Http/Controllers/CommandeController.php(73): Illuminate/Mail/PendingMail->send(Object(App/Mail/CommandeConfirmation))
+#15 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App/Http/Controllers/CommandeController->store(Object(Illuminate/Http/Request))
+#16 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(43): Illuminate/Routing/Controller->callAction('store', Array)
+#17 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Route.php(260): Illuminate/Routing/ControllerDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(App/Http/Controllers/CommandeController), 'store')
+#18 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#19 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#20 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->Illuminate/Routing/{closure}(Object(Illuminate/Http/Request))
+#21 C:/laragon/www/isi_burger/app/Http/Middleware/ClientMiddleware.php(18): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#22 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): App/Http/Middleware/ClientMiddleware->handle(Object(Illuminate/Http/Request), Object(Closure))
+#23 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#24 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#25 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#26 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#27 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#28 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#29 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#30 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#31 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#32 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#33 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#34 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#35 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#36 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#37 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#38 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#39 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#40 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#41 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#42 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->Illuminate/Foundation/Http/{closure}(Object(Illuminate/Http/Request))
+#43 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#44 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#45 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#46 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#47 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#48 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#49 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#50 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#51 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#52 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#53 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#54 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#55 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#56 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#57 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#58 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#59 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#60 C:/laragon/www/isi_burger/public/index.php(52): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#61 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('C://laragon//www//...')
+#62 {main}
+"} 
+[2026-03-31 17:29:00] local.ERROR: Expected response code "250" but got code "530", with message "530 5.7.1 Authentication required". {"userId":2,"exception":"[object] (Symfony\\Component\\Mailer\\Exception\\UnexpectedResponseException(code: 530): Expected response code \"250\" but got code \"530\", with message \"530 5.7.1 Authentication required\". at C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php:327)
+[stacktrace]
+#0 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(186): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
+#1 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/EsmtpTransport.php(118): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->executeCommand('MAIL FROM:<nore...', Array)
+#2 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(248): Symfony/Component/Mailer/Transport/Smtp/EsmtpTransport->executeCommand('MAIL FROM:<nore...', Array)
+#3 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(203): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->doMailFromCommand('noreply@isiburg...')
+#4 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/AbstractTransport.php(69): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->doSend(Object(Symfony/Component/Mailer/SentMessage))
+#5 C:/laragon/www/isi_burger/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php(137): Symfony/Component/Mailer/Transport/AbstractTransport->send(Object(Symfony/Component/Mime/Email), Object(Symfony/Component/Mailer/DelayedEnvelope))
+#6 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(573): Symfony/Component/Mailer/Transport/Smtp/SmtpTransport->send(Object(Symfony/Component/Mime/Email), Object(Symfony/Component/Mailer/DelayedEnvelope))
+#7 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(335): Illuminate/Mail/Mailer->sendSymfonyMessage(Object(Symfony/Component/Mime/Email))
+#8 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php(213): Illuminate/Mail/Mailer->send('emails.commande...', Array, Object(Closure))
+#9 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Support/Traits/Localizable.php(19): Illuminate/Mail/Mailable->Illuminate/Mail/{closure}()
+#10 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php(214): Illuminate/Mail/Mailable->withLocale(NULL, Object(Closure))
+#11 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(357): Illuminate/Mail/Mailable->send(Object(Illuminate/Mail/Mailer))
+#12 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(301): Illuminate/Mail/Mailer->sendMailable(Object(App/Mail/CommandeConfirmation))
+#13 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Mail/PendingMail.php(124): Illuminate/Mail/Mailer->send(Object(App/Mail/CommandeConfirmation))
+#14 C:/laragon/www/isi_burger/app/Http/Controllers/CommandeController.php(73): Illuminate/Mail/PendingMail->send(Object(App/Mail/CommandeConfirmation))
+#15 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App/Http/Controllers/CommandeController->store(Object(Illuminate/Http/Request))
+#16 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(43): Illuminate/Routing/Controller->callAction('store', Array)
+#17 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Route.php(260): Illuminate/Routing/ControllerDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(App/Http/Controllers/CommandeController), 'store')
+#18 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#19 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#20 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->Illuminate/Routing/{closure}(Object(Illuminate/Http/Request))
+#21 C:/laragon/www/isi_burger/app/Http/Middleware/ClientMiddleware.php(18): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#22 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): App/Http/Middleware/ClientMiddleware->handle(Object(Illuminate/Http/Request), Object(Closure))
+#23 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#24 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#25 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#26 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#27 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#28 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#29 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#30 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#31 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#32 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#33 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#34 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#35 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#36 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#37 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#38 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#39 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#40 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#41 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#42 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->Illuminate/Foundation/Http/{closure}(Object(Illuminate/Http/Request))
+#43 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#44 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#45 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#46 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#47 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#48 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#49 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#50 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#51 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#52 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#53 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#54 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#55 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#56 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#57 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#58 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#59 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#60 C:/laragon/www/isi_burger/public/index.php(52): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#61 C:/laragon/www/isi_burger/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('C://laragon//www//...')
+#62 {main}
+"} 
+[2026-03-31 17:34:55] local.DEBUG: From: ISI Burger <noreply@isiburger.sn>
+To: client@isiburger.sn
+Subject: Confirmation de votre commande #2
+MIME-Version: 1.0
+Date: Tue, 31 Mar 2026 17:34:55 +0000
+Message-ID: <7a2ac0e530014ee00ac9e722e9a0a560@isiburger.sn>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8f9fa; padding: 20px; }
+        .container { background: white; border-radius: 10px; padding: 30px; max-width: 600px; margin: auto; }
+        h2 { color: #ff6b35; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th { background-color: #ff6b35; color: white; padding: 8px; }
+        td { padding: 8px; border-bottom: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>🍔 ISI Burger - Confirmation de commande</h2>
+
+    <p>Bonjour <strong>Client Test</strong>,</p>
+    <p>Votre commande <strong>#2</strong> a bien été reçue et est en cours de traitement.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Burger</th>
+                <th>Quantité</th>
+                <th>Sous-total</th>
+            </tr>
+        </thead>
+        <tbody>
+                            <tr>
+                    <td>Spicy Burger</td>
+                    <td>2</td>
+                    <td>9 000 FCFA</td>
+                </tr>
+                            <tr>
+                    <td>Classic Burger</td>
+                    <td>1</td>
+                    <td>3 500 FCFA</td>
+                </tr>
+                    </tbody>
+    </table>
+
+    <p style="margin-top:15px;">
+        <strong>Total : 12 500 FCFA</strong>
+    </p>
+
+    <p>Nous vous notifierons dès que votre commande sera prête.</p>
+    <p>Merci pour votre confiance ! 🍔</p>
+    <p><em>L'équipe ISI Burger</em></p>
+</div>
+</body>
+</html>
+  
+[2026-03-31 17:37:53] local.DEBUG: From: ISI Burger <noreply@isiburger.sn>
+To: client@isiburger.sn
+Subject: Votre commande #2 est =?utf-8?Q?pr=C3=AAte?= !
+MIME-Version: 1.0
+Date: Tue, 31 Mar 2026 17:37:53 +0000
+Message-ID: <bf868e802da16520823cbfc0d0a065f7@isiburger.sn>
+Content-Type: multipart/mixed; boundary=vLlJwbpU
+
+--vLlJwbpU
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8f9fa; padding: 20px; }
+        .container { background: white; border-radius: 10px; padding: 30px; max-width: 600px; margin: auto; }
+        h2 { color: #ff6b35; }
+        .badge { background-color: #28a745; color: white; padding: 6px 14px; border-radius: 20px; font-size: 14px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th { background-color: #ff6b35; color: white; padding: 8px; }
+        td { padding: 8px; border-bottom: 1px solid #ddd; }
+        .total { font-weight: bold; font-size: 16px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>🍔 ISI Burger - Votre commande est prête !</h2>
+
+    <p>Bonjour <strong>Client Test</strong>,</p>
+
+    <p>
+        Bonne nouvelle ! Votre commande <strong>#2</strong>
+        est <span class="badge">✅ PRÊTE</span> et vous attend.
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Burger</th>
+                <th>Quantité</th>
+                <th>Prix unitaire</th>
+                <th>Sous-total</th>
+            </tr>
+        </thead>
+        <tbody>
+                            <tr>
+                    <td>Spicy Burger</td>
+                    <td>2</td>
+                    <td>4 500 FCFA</td>
+                    <td>9 000 FCFA</td>
+                </tr>
+                            <tr>
+                    <td>Classic Burger</td>
+                    <td>1</td>
+                    <td>3 500 FCFA</td>
+                    <td>3 500 FCFA</td>
+                </tr>
+                    </tbody>
+    </table>
+
+    <p class="total">Total : 12 500 FCFA</p>
+
+    <p>Votre facture est disponible en pièce jointe (PDF).</p>
+    <p>Passez récupérer votre commande dès que possible. Bon appétit ! 🍔</p>
+    <p><em>L'équipe ISI Burger</em></p>
+</div>
+</body>
+</html>
+
+--vLlJwbpU
+Content-Type: application/pdf; name=facture_commande_2.pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; name=facture_commande_2.pdf;
+ filename=facture_commande_2.pdf
+
+JVBERi0xLjcKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZwovT3V0bGluZXMgMiAwIFIKL1BhZ2Vz
+IDMgMCBSID4+CmVuZG9iagoyIDAgb2JqCjw8IC9UeXBlIC9PdXRsaW5lcyAvQ291bnQgMCA+Pgpl
+bmRvYmoKMyAwIG9iago8PCAvVHlwZSAvUGFnZXMKL0tpZHMgWzYgMCBSCl0KL0NvdW50IDEKL1Jl
+c291cmNlcyA8PAovUHJvY1NldCA0IDAgUgovRm9udCA8PCAKL0YxIDggMCBSCi9GMiA5IDAgUgo+
+PgovRXh0R1N0YXRlIDw8IAovR1MxIDEwIDAgUgovR1MyIDExIDAgUgo+Pgo+PgovTWVkaWFCb3gg
+WzAuMDAwIDAuMDAwIDU5NS4yODAgODQxLjg5MF0KID4+CmVuZG9iago0IDAgb2JqClsvUERGIC9U
+ZXh0IF0KZW5kb2JqCjUgMCBvYmoKPDwKL1Byb2R1Y2VyICj+/wBkAG8AbQBwAGQAZgAgADMALgAx
+AC4ANQAgACsAIABDAFAARABGKQovQ3JlYXRpb25EYXRlIChEOjIwMjYwMzMxMTczNzUzKzAwJzAw
+JykKL01vZERhdGUgKEQ6MjAyNjAzMzExNzM3NTMrMDAnMDAnKQovVGl0bGUgKP7/AEYAYQBjAHQA
+dQByAGUAIAAjADIpCj4+CmVuZG9iago2IDAgb2JqCjw8IC9UeXBlIC9QYWdlCi9NZWRpYUJveCBb
+MC4wMDAgMC4wMDAgNTk1LjI4MCA4NDEuODkwXQovUGFyZW50IDMgMCBSCi9Db250ZW50cyA3IDAg
+Ugo+PgplbmRvYmoKNyAwIG9iago8PCAvRmlsdGVyIC9GbGF0ZURlY29kZQovTGVuZ3RoIDE3MDIg
+Pj4Kc3RyZWFtCniclVjJbhtHEL3zKzrIJUHiVu+LL4kXybCRxZYY5GD4QNO0QkQibXLoJEA+Kp/k
+K/8ir3t6G5KjKIAxVJW7ul5Vva6umcnHiVSUcUOsdJRbRW5JUdiouCHacCqMOqlxhxrFqBJBk7cp
+il/JasIpY4wETXgK5sjls4mgQpM/CCMvyGtC3uCPdxWVp8J7oKoue80NuZq8mpw9u+Lkeht+Rfg9
+3n9zPXk8JUJYypQj1lkqDSfTd+TsQhCB9WT6npDXX3339RsyfUHOp3E5nDjH7lhOnl89J49/uXx2
+flkM4bZ3Xp7JORcU8Im10Grf78YJXKTNLhfbbrbbzFZdv+1uc73YkAfk6ez32eZbcrVf7a9nNwOA
+DPEwT6w2VDJ9vOV8vepm8+775Xb5Nm5HtyvyN/lGiICDxCyFfw14wfqc5WcPPheCS2o0y5moji7g
+ZbfZk8/kYQswmzFOrTqB78nNcoFwp4j8hJlxWKnYibCi2SCqQVq4o5Y7YqylXpoxtAvy0z9DuMJK
+qpUcGraOyZdimH9HNWfEGEOZ5MeOns66xYELqan2ZmgycCH5GZNnggkzdKWpQzmMVpSLEzFddbNu
+1x0681RaPzQaOCurP06EEpS5sNhQry0O25HqZqhSYHOQuUSutabe6Cgjxigr68g8WkhEGkB4L+IK
+ZU2UNe8tkI0oM22ShdNBg3J4hxWSMs+jzHFygiyjhQCtegvwUomokVLFFV4HVJx6FXZQOCA+ymHH
+YKHglUWNUBYrNFpDwM1Qeh5lhZCDjFiiBSpgWdRIdAWhTNqTUa50lK2BT+Xhu7ewVCDtQWNjbiy1
+TEbZiLAD+mbIJWSN5hgsHDW2t1AioPLorCLK0room+RD9tm1sOWmaEKJHMPxaYwga+bqppC9161b
+x6lyvAKDHNOXgTuUjNs2NGic1TV4h5JwVZMD2YpB+hw4KH1NMGQtdC0A5H7HUiKn+/TlIkLWbZEh
+u3DMKw0cDpWXlSiQpXCVSJB1tChUg8YyV8kI2WlZyQrZK9/S2YU7xFTCBzlkMx+IRg5nJlk0mlii
+rLJgmSR1UxvdVbeOKqkT0B6Yo170wHrgKLL3TWg43cltCt6gJCm0mBzIVuuaPlyp3NiU8JhgaHQs
+YioA5D7UVCKDAnCTihqLaPozXIoM2TtZaWAkbvc+fYko0OhYxEQkyNb4SjUTTrBP5IxkNNg70iCR
+FbLwstIZsvQsWiTCQ6NcT/h4ICBrZLOcmSSHc5fOVdLERpeOXjbKRzNvmg9vdZuPdwaWj38GnhtE
+DS23kBx8bjE5ObkJ1fTlNpUTnNtYLkBudLVEuRXmIuZWmYucm2mlQW63mSi5HWcilYZdqFZaeiJj
+afmJrOVSKHQu10YifLlW0oE4uHmaEpVGF0dJtB/8d99kMLBYHgaWYp3WhqQxQ7jGYsyCC/J+dGhs
+n2luC23SnbhE8xD48vJ8el4u0pOzZx5oWBhoOOGoEvPgEILD2BYBjblXvOcqRysWJ0aMfky82z23
+4CqX1b/kcWC/j3+OJmCC7RiAl5vln2S3Wnaz5WbxH2mAf7S6ioOFkt0PB9hMbbAdw/Fqh8l52e3v
+hqDgOkzhBQIuF8vuBwF9ibJgOwbhar3bPujWXTOljw3Uqaza47yi3R1NZlcflvO/yEFxm3KMGiqi
+4eTiycWjwUSdsjdqNphrc6Cjq318dRg4QRNGB2iflffxrc01vJc12Yw6Ew5wfeJdMDSekXdBHS4p
+YLslmdVZE94F/yvdJjQRcepFZLbdLueHCT8ZVPGbo8qnqYnqEBvepxP374O2FHkMrjwu8un8Z6cZ
+aj5wDdRDYLckn5H7QC3EGoPK70ZYfGWE+Tw2CA/x1M8A9yt9IvP/SGZuHR5XEUgJPA2Z8Wsxb0gb
+piVch5pavCv2ucx8hykunIajSROANvuE1tQsSpqw6NCwIVCz1aFls6rZ69CyqXAL68CyWdXsNcoD
+GdbCWsk4Q6beyFGnlObpz9NHP5Dp9MndWW6dhjQXQjRpPoTfEKIJ6BB+s+oeARXajAaEifKIOOVD
+msbCwI7yIU2Hzz9KNx/JTmn4kYbFLNzUbbIiTD+NM24HESbN6e9jGI9lSHl9pr6DwRgtgqjw+uHK
+qONKyD8uNvMlebcgn9YdKjFfr94vZ6v5gnzRfrL6hGuQbNe732bLbkHerldk9uHDHnczGV4y4UVP
+jjsbfIvjHnFjlTIYw408Xv10Pd/dho9J1/vVfrMns123vp11y4+7RVTfLJovK+QzYn0obfbwL0en
+dY4KZW5kc3RyZWFtCmVuZG9iago4IDAgb2JqCjw8IC9UeXBlIC9Gb250Ci9TdWJ0eXBlIC9UeXBl
+MQovTmFtZSAvRjEKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2Rp
+bmcKPj4KZW5kb2JqCjkgMCBvYmoKPDwgL1R5cGUgL0ZvbnQKL1N1YnR5cGUgL1R5cGUxCi9OYW1l
+IC9GMgovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5n
+Cj4+CmVuZG9iagoxMCAwIG9iago8PCAvVHlwZSAvRXh0R1N0YXRlCi9CTSAvTm9ybWFsCi9DQSAx
+Cj4+CmVuZG9iagoxMSAwIG9iago8PCAvVHlwZSAvRXh0R1N0YXRlCi9CTSAvTm9ybWFsCi9jYSAx
+Cj4+CmVuZG9iagp4cmVmCjAgMTIKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDA5IDAwMDAw
+IG4gCjAwMDAwMDAwNzQgMDAwMDAgbiAKMDAwMDAwMDEyMCAwMDAwMCBuIAowMDAwMDAwMzI2IDAw
+MDAwIG4gCjAwMDAwMDAzNTUgMDAwMDAgbiAKMDAwMDAwMDUzNiAwMDAwMCBuIAowMDAwMDAwNjM5
+IDAwMDAwIG4gCjAwMDAwMDI0MTQgMDAwMDAgbiAKMDAwMDAwMjUyMSAwMDAwMCBuIAowMDAwMDAy
+NjMzIDAwMDAwIG4gCjAwMDAwMDI2OTAgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSAxMgovUm9v
+dCAxIDAgUgovSW5mbyA1IDAgUgovSURbPDc2YTVlM2M3NDliYTk0NzdkOTYwMzY0MTQwZTVlMWE3
+Pjw3NmE1ZTNjNzQ5YmE5NDc3ZDk2MDM2NDE0MGU1ZTFhNz5dCj4+CnN0YXJ0eHJlZgoyNzQ3CiUl
+RU9GCg==
+--vLlJwbpU--
+  
