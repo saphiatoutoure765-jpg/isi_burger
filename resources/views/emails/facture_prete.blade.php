@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="container">
-    <h2>🍔 ISI Burger - Votre commande est prête !</h2>
+    <h2> ISI Burger - Votre commande est prête !</h2>
 
     <p>Bonjour <strong>{{ $commande->user->name }}</strong>,</p>
 

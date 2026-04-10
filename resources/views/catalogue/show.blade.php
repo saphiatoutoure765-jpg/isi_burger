@@ -24,7 +24,7 @@
             <hr>
 
             <a href="{{ route('commander') }}" class="btn btn-warning btn-lg">
-                🛒 Commander maintenant
+                 Commander maintenant
             </a>
             <a href="{{ route('catalogue') }}" class="btn btn-secondary ms-2">
                 ← Retour au catalogue

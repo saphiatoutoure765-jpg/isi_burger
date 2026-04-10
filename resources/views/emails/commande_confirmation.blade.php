@@ -42,7 +42,7 @@
     </p>
 
     <p>Nous vous notifierons dès que votre commande sera prête.</p>
-    <p>Merci pour votre confiance ! 🍔</p>
+    <p>Merci pour votre confiance ! </p>
     <p><em>L'équipe ISI Burger</em></p>
 </div>
 </body>

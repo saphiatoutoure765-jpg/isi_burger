@@ -19,16 +19,16 @@ class Commande extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);   //Une commande appartient a un seul client
     }
 
     public function lignesCommande()
     {
-        return $this->hasMany(LigneCommande::class);
+        return $this->hasMany(LigneCommande::class);// une commande a plusieurs lignes
     }
 
     public function paiement()
     {
-        return $this->hasOne(Paiement::class);
+        return $this->hasOne(Paiement::class);//une commande ne peut avoir qu'un seul paiement
     }
 }

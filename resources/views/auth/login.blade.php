@@ -36,7 +36,9 @@
                     <input type="password" name="password" class="form-control" required>
                 </div>
 
-                <button class="btn btn-warning w-100 fw-bold">Se connecter</button>
+                <button class="btn w-100 fw-bold" style="background-color: #ff6b35; border-color: #ff6b35; color: white;">
+                    Se connecter
+                </button>
             </form>
 
             <hr>

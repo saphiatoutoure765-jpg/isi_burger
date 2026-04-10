@@ -9,14 +9,14 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    // Afficher le formulaire de connexion
+    // Affiche formlogin
     public function showLogin()
     {
         return view('auth.login');
     }
 
     // Connecter l'utilisateur
-    public function login(Request $request)
+    public function login(Request $request)//affiche toux ceux qu'on doit envoyer au formulaire
     {
         $credentials = [
             'email'    => $request['email'],

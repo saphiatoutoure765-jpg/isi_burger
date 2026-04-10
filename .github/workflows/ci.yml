@@ -30,4 +30,4 @@ jobs:
 
       - name: Creation de l image Docker
         run: |
-          docker build -t isi_burger:latest .
+          docker build -t ISI_BURGER :Latest;

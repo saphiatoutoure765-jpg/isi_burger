@@ -24,12 +24,12 @@
         <div class="ms-auto d-flex align-items-center">
             @auth
                 <span class="text-light me-3">
-                    <i class="bi bi-person-circle"></i>
-                    {{ Auth::user()->name }}
-                    <span class="badge bg-{{ Auth::user()->isGestionnaire() ? 'warning' : 'success' }} ms-1">
-                        {{ Auth::user()->role }}
-                    </span>
-                </span>
+    <i class="bi bi-person-circle"></i>
+    <span style="color: #FF6B00;">{{ Auth::user()->name }}</span>
+    <span class="badge ms-1" style="background-color: #FF6B00; color: #fff;">
+        {{ Auth::user()->role }}
+    </span>
+</span>
                 <form action="{{ route('logout') }}" method="POST" class="d-inline">
                     @csrf
                     <button class="btn btn-outline-danger btn-sm">
@@ -44,7 +44,7 @@
 <div class="container-fluid">
     <div class="row">
 
-        {{-- SIDEBAR GESTIONNAIRE --}}
+        // SIDEBAR GESTIONNAIRE
         @auth
         @if(Auth::user()->isGestionnaire())
         <div class="col-md-2 sidebar pt-3">
@@ -60,7 +60,7 @@
         </div>
         <div class="col-md-10 pt-4">
         @else
-        {{-- NAVBAR CLIENT --}}
+        // NAVBAR CLIENT
         <div class="col-12">
         <nav class="navbar navbar-light bg-light mb-3">
             <div class="container">
@@ -80,7 +80,7 @@
         @endif
         @endauth
 
-            {{-- MESSAGES --}}
+            // MESSAGES
             @if(session('error'))
                 <div class="alert alert-danger">{{ session('error') }}</div>
             @endif

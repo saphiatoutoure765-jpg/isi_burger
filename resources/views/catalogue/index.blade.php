@@ -5,7 +5,7 @@
     <h2> Catalogue des Burgers</h2>
     <hr>
 
-    {{-- Filtres --}}
+    // Filtres
     <form action="{{ route('catalogue') }}" method="GET" class="row g-2 mb-4">
         <div class="col-md-4">
             <input type="text" name="nom" class="form-control"

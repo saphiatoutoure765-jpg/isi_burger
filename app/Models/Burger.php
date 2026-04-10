@@ -11,7 +11,7 @@ class Burger extends Model
 
     protected $fillable = [
         'nom',
-        'prix',
+        'prix',         //Les colonnes modifiables du burger
         'image',
         'description',
         'stock',

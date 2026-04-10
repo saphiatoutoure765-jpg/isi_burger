@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Mail;
 
 class CommandeController extends Controller
 {
-    // ===== CÔTÉ CLIENT =====
+    // =====  PARTIE CLIENT =====
 
     // Afficher les commandes du client connecté
     public function mesCommandes()
@@ -111,7 +111,7 @@ class CommandeController extends Controller
         $commande->statut = $request['statut'];
         $commande->save();
 
-        // Si la commande est prête → envoyer la facture PDF par email
+        // Si  commande est prête → envoyer la facture PDF par email
         if ($request['statut'] === 'prete') {
             Mail::to($commande->user->email)->send(new FacturePrete($commande));
         }
